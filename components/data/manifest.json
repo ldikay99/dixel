@@ -1,0 +1,387 @@
+[
+  {
+    "class": "StatCounter",
+    "file": "StatCounter.js",
+    "extends": "Component",
+    "description": "Número que cuenta hasta su valor al entrar en pantalla, con separador de miles.",
+    "demo": {
+      "value": 128450,
+      "label": "Usuarios activos",
+      "suffix": "+",
+      "duration": 1.8
+    }
+  },
+  {
+    "class": "Sparkline",
+    "file": "Sparkline.js",
+    "extends": "Component",
+    "description": "Mini gráfico de línea en canvas que se dibuja al entrar, con gradiente de relleno; lineWidth ajustable y pointMarkers para marcar cada dato.",
+    "demo": {
+      "data": [
+        4,
+        9,
+        6,
+        12,
+        10,
+        16,
+        13,
+        21,
+        18,
+        26
+      ],
+      "color": "cyan",
+      "pointMarkers": false
+    }
+  },
+  {
+    "class": "ChartTooltip",
+    "file": "ChartTooltip.js",
+    "extends": null,
+    "description": "Tooltip compartido de todos los charts: portal al body con título, filas por serie con swatch y valor formateado.",
+    "demo": null
+  },
+  {
+    "class": "LineChart",
+    "file": "LineChart.js",
+    "extends": "Component",
+    "description": "Líneas multi-serie con curvas suaves, glow, tooltip con crosshair, extremos marcados, formatos y leyenda clicable. Personalizable: showGrid (bool), gridColor (token, ej. line), labelRotation (grados para fechas largas), pointMarkers (bool, punto en cada dato), lineWidth global o por serie (serie.lineWidth), format (compact/number/currency/percent), currency y locale.",
+    "demo": {
+      "labels": [
+        "12 ene",
+        "12 feb",
+        "12 mar",
+        "12 abr",
+        "12 may",
+        "12 jun",
+        "12 jul"
+      ],
+      "series": [
+        {
+          "label": "Ventas",
+          "data": [
+            12,
+            19,
+            14,
+            26,
+            22,
+            34,
+            29
+          ]
+        },
+        {
+          "label": "Costos",
+          "data": [
+            8,
+            11,
+            10,
+            14,
+            13,
+            18,
+            15
+          ],
+          "color": "magenta"
+        }
+      ],
+      "markExtremes": true,
+      "format": "compact",
+      "labelRotation": 0,
+      "pointMarkers": true,
+      "showGrid": true
+    }
+  },
+  {
+    "class": "AreaChart",
+    "file": "AreaChart.js",
+    "extends": "LineChart",
+    "description": "Áreas multi-serie apilables con degradados superpuestos y tooltip con totales. Hereda la personalización de LineChart: showGrid, gridColor, labelRotation, pointMarkers, lineWidth por serie, format, currency y locale.",
+    "demo": {
+      "labels": [
+        "Lun",
+        "Mar",
+        "Mié",
+        "Jue",
+        "Vie",
+        "Sáb",
+        "Dom"
+      ],
+      "series": [
+        {
+          "label": "Orgánico",
+          "data": [
+            14,
+            18,
+            16,
+            22,
+            26,
+            31,
+            28
+          ]
+        },
+        {
+          "label": "Pago",
+          "data": [
+            8,
+            9,
+            11,
+            10,
+            14,
+            16,
+            13
+          ],
+          "color": "cyan"
+        },
+        {
+          "label": "Referidos",
+          "data": [
+            4,
+            5,
+            4,
+            7,
+            6,
+            9,
+            8
+          ],
+          "color": "magenta"
+        }
+      ],
+      "stacked": true
+    }
+  },
+  {
+    "class": "LiveChart",
+    "file": "LiveChart.js",
+    "extends": "Component",
+    "description": "Línea en streaming con push(valor), ventana deslizante, glow y punto final latiendo — se autoalimenta en demo solo mientras es visible.",
+    "demo": {
+      "label": "Latencia p95 · ms",
+      "demo": true,
+      "min": 0,
+      "max": 100,
+      "color": "cyan"
+    }
+  },
+  {
+    "class": "RadarChart",
+    "file": "RadarChart.js",
+    "extends": "Component",
+    "description": "Polígono multi-eje con relleno translúcido, vértices animados al entrar y tooltip por eje.",
+    "demo": {
+      "axes": [
+        "Velocidad",
+        "Diseño",
+        "Código",
+        "Motion",
+        "Accesibilidad",
+        "SEO"
+      ],
+      "series": [
+        {
+          "label": "DIXEL",
+          "data": [
+            92,
+            88,
+            90,
+            96,
+            84,
+            80
+          ]
+        },
+        {
+          "label": "Promedio",
+          "data": [
+            60,
+            55,
+            62,
+            40,
+            58,
+            66
+          ],
+          "color": "magenta"
+        }
+      ]
+    }
+  },
+  {
+    "class": "HeatmapGrid",
+    "file": "HeatmapGrid.js",
+    "extends": "Component",
+    "description": "Calendario de intensidad estilo GitHub con escala de marca, tooltip por celda (fecha y valor) y entrada escalonada.",
+    "demo": {
+      "weeks": 26,
+      "unit": "commits"
+    }
+  },
+  {
+    "class": "DonutProgress",
+    "file": "DonutProgress.js",
+    "extends": "Component",
+    "description": "Anillo multi-segmento con barrido animado, hover que engrosa el segmento, valor central contando y porcentajes en leyenda.",
+    "demo": {
+      "segments": [
+        {
+          "label": "Diseño",
+          "value": 34
+        },
+        {
+          "label": "Desarrollo",
+          "value": 46
+        },
+        {
+          "label": "QA",
+          "value": 12
+        },
+        {
+          "label": "Gestión",
+          "value": 8
+        }
+      ],
+      "centerLabel": "Horas"
+    }
+  },
+  {
+    "class": "BulletChart",
+    "file": "BulletChart.js",
+    "extends": "Component",
+    "description": "Barra de rendimiento contra objetivo con rangos de fondo y marcador de meta — compacta para filas de dashboard.",
+    "demo": {
+      "label": "Ventas Q3",
+      "value": 78,
+      "target": 85,
+      "max": 100,
+      "format": "percent"
+    }
+  },
+  {
+    "class": "BarChart",
+    "file": "BarChart.js",
+    "extends": "Component",
+    "description": "Barras que suben escalonadas con transform al entrar en pantalla. Valores con format (number/compact/currency/percent), currency y locale como LineChart.",
+    "demo": {
+      "data": [
+        {
+          "label": "Lun",
+          "value": 42
+        },
+        {
+          "label": "Mar",
+          "value": 61
+        },
+        {
+          "label": "Mié",
+          "value": 38
+        },
+        {
+          "label": "Jue",
+          "value": 74
+        },
+        {
+          "label": "Vie",
+          "value": 55
+        }
+      ],
+      "format": "number",
+      "locale": "es-CO"
+    }
+  },
+  {
+    "class": "RingChart",
+    "file": "RingChart.js",
+    "extends": "Component",
+    "description": "Donut SVG cuyos segmentos barren al entrar, con leyenda de porcentajes.",
+    "demo": {
+      "data": [
+        {
+          "label": "Web",
+          "value": 46
+        },
+        {
+          "label": "Móvil",
+          "value": 32
+        },
+        {
+          "label": "API",
+          "value": 22
+        }
+      ],
+      "centerValue": "100%",
+      "centerLabel": "Tráfico"
+    }
+  },
+  {
+    "class": "Meter",
+    "file": "Meter.js",
+    "extends": "Component",
+    "description": "Gauge semicircular que se llena hasta su valor con número animado.",
+    "demo": {
+      "value": 78,
+      "max": 100,
+      "suffix": "%",
+      "label": "Capacidad"
+    }
+  },
+  {
+    "class": "KpiTile",
+    "file": "KpiTile.js",
+    "extends": "Component",
+    "description": "Tarjeta KPI con contador, delta con flecha y sparkline integrados.",
+    "demo": {
+      "label": "Ingresos",
+      "value": 84300,
+      "prefix": "$",
+      "delta": 12.4,
+      "data": [
+        30,
+        42,
+        38,
+        55,
+        49,
+        68,
+        61,
+        84
+      ],
+      "color": "success"
+    }
+  },
+  {
+    "class": "DataTable",
+    "file": "DataTable.js",
+    "extends": "Component",
+    "description": "Tabla con encabezado sticky, orden por columna y filas que entran escalonadas — con columnLines para divisiones verticales de columna.",
+    "demo": {
+      "columns": [
+        {
+          "key": "name",
+          "label": "Proyecto"
+        },
+        {
+          "key": "owner",
+          "label": "Responsable"
+        },
+        {
+          "key": "progress",
+          "label": "Avance",
+          "align": "right"
+        }
+      ],
+      "rows": [
+        {
+          "name": "Atlas",
+          "owner": "Sofía",
+          "progress": 82
+        },
+        {
+          "name": "Nébula",
+          "owner": "Marco",
+          "progress": 47
+        },
+        {
+          "name": "Orbe",
+          "owner": "Lina",
+          "progress": 91
+        }
+      ],
+      "height": "320px",
+      "columnLines": true
+    }
+  }
+]
